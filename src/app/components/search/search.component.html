@@ -1,0 +1,18 @@
+<div>
+    <input [(ngModel)]="cep" placeholder="Digite o CEP">
+    <button (click)="buscarCep()">Buscar</button>
+  </div>
+  
+  <div *ngIf="endereco">
+    <p>CEP: {{ endereco.cep }}</p>
+    <p>Endereço: {{ endereco.address }}</p>
+    <p>Bairro: {{ endereco.district }}</p>
+    <p>Cidade: {{ endereco.city }}</p>
+    <p>Estado: {{ endereco.state }}</p>
+    
+  </div>
+  
+  <div *ngIf="erro">
+    <p>Erro ao buscar informações de CEP.</p>
+  </div>
+  
